@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Mm]emoryCaptures/
+SpaceRaced/[Ll]ibrary/
+SpaceRaced/[Tt]emp/
+SpaceRaced/[Oo]bj/
+SpaceRaced/[Bb]uild/
+SpaceRaced/[Bb]uilds/
+SpaceRaced/[Ll]ogs/
+SpaceRaced/[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
