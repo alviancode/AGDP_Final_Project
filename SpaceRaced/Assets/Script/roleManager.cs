@@ -3,21 +3,28 @@ using UnityEngine;
 using Mirror;
 using System.Linq;
 
-public class roleManager : MonoBehaviour
+public class roleManager : NetworkBehaviour
 {
-    public GameObject robot;
-    public GameObject shooter;
-    public int characterType;
+    public GameObject moverPrefab;
+    public GameObject shooterPrefab;
+    public int characterTypez;
 
-
-    private void Awake()
+    
+    [Command]
+    void CmdChooser(int characterType)
     {
         if(characterType == 1){
-            gameObject.GetComponent<NetworkManager>().spawnPrefabs.Add(robot);
+            var mover = NetworkManager.Instantiate(moverPrefab);
+            NetworkServer.Spawn(mover);
         }
         else if (characterType == 2){
-            gameObject.GetComponent<NetworkManager>().spawnPrefabs.Add(shooter);
+            var shooter = NetworkManager.Instantiate(shooterPrefab);
+            NetworkServer.Spawn(shooter);
         }
-        
+    }
+
+    
+    void OnClientConnect(){
+        CmdChooser(characterTypez);
     }
 }
