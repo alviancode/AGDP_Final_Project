@@ -17,8 +17,8 @@ public class RobotMovement : NetworkBehaviour
     [Range(5f,25f)]
     public float gravity = 15f;
     //the speed of the player movement
-    [Range(5f,15f)]
-    public float movementSpeed = 10f;
+    [Range(1f,15f)]
+    public float movementSpeed = 5f;
     //jump speed
     [Range(5f,15f)]
     public float jumpSpeed = 10f;
@@ -93,7 +93,4 @@ public class RobotMovement : NetworkBehaviour
         animator.SetFloat("forward", z);
         animator.SetFloat("strafe", x);
     }
-
-
-
 }
