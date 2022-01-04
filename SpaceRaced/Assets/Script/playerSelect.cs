@@ -17,7 +17,6 @@ public class playerSelect : NetworkBehaviour {
 
     public void robotMover() {
         selectedCharacterIndex = 1;
-        
     }
 
     public void robotShooter() {
@@ -46,41 +45,44 @@ public class playerSelect : NetworkBehaviour {
     }
 
     public void select() {
-        CmdSelect(selectedCharacterIndex);
-        Debug.Log(selectedCharacterIndex);
+        if(selectedCharacterIndex >= 1 && selectedCharacterIndex <= 6) {
+            CmdSelect(selectedCharacterIndex);
+            Debug.Log("Cool Index Bro: " + selectedCharacterIndex);
+            characterSelectDisplay.SetActive(false);
+        }
     }
 
-    [Command(requiresAuthority = false)]
+    [Command(requiresAuthority=false)]
     public void CmdSelect(int characterIndex, NetworkConnectionToClient sender = null) {
-        if (selectedCharacterIndex == 1) {
+        if (characterIndex == 1) {
             GameObject characterInstance = Instantiate(robotMovementPrefab);
             NetworkServer.Spawn(characterInstance, sender);
-            characterSelectDisplay.SetActive(false);
+            Debug.Log("Char1");
         }
-        else if (selectedCharacterIndex == 2) {
+        if (characterIndex == 2) {
             GameObject characterInstance = Instantiate(robotShooterPrefab);
             NetworkServer.Spawn(characterInstance, sender);
-            characterSelectDisplay.SetActive(false);
+            Debug.Log("Char2");
         }
-        else if (selectedCharacterIndex == 3) {
+        if (characterIndex == 3) {
             GameObject characterInstance = Instantiate(freeRoamerPrefab);
             NetworkServer.Spawn(characterInstance, sender);
-            characterSelectDisplay.SetActive(false);
+            Debug.Log("Char3");
         }
-        else if (selectedCharacterIndex == 4) {
+        if (characterIndex == 4) {
             GameObject characterInstance = Instantiate(blueFactionPrefab1);
             NetworkServer.Spawn(characterInstance, sender);
-            characterSelectDisplay.SetActive(false);
+            Debug.Log("Char4");
         }
-        else if (selectedCharacterIndex == 5) {
+        if (characterIndex == 5) {
             GameObject characterInstance = Instantiate(blueFactionPrefab2);
             NetworkServer.Spawn(characterInstance, sender);
-            characterSelectDisplay.SetActive(false);
+            Debug.Log("Char5");
         }
-        else if (selectedCharacterIndex == 6) {
+        if (characterIndex == 6) {
             GameObject characterInstance = Instantiate(blueFactionPrefab3);
             NetworkServer.Spawn(characterInstance, sender);
-            characterSelectDisplay.SetActive(false);
+            Debug.Log("Char6");
         }
     }
 }
