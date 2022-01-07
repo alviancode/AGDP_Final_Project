@@ -3,22 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-[RequireComponent(typeof(CharacterController))]
-public class FirstPersonController : NetworkBehaviour
+
+public class RobotShooting : NetworkBehaviour
 {
     /// <summary>
     /// Move the player charactercontroller based on horizontal and vertical axis input
     /// </summary>
 
-    float yVelocity = 0f;
-    [Range(5f,25f)]
-    public float gravity = 15f;
-    //the speed of the player movement
-    [Range(5f,15f)]
-    public float movementSpeed = 10f;
-    //jump speed
-    [Range(5f,15f)]
-    public float jumpSpeed = 10f;
+    GameObject mover;
 
     //now the camera so we can move it up and down
     Transform cameraTransform;
@@ -30,14 +22,11 @@ public class FirstPersonController : NetworkBehaviour
     [Range(0.5f, 5f)]
     public float mouseSensitivity = 2f;
 
-    //the charachtercompononet for moving us
-    CharacterController cc;
-
     Transform canvasCrosshair;
 
     private void Start()
     {
-        cc = GetComponent<CharacterController>();
+        mover = GameObject.FindGameObjectWithTag("RobotMovement");
         cameraTransform = GetComponentInChildren<Camera>().transform;
         canvasCrosshair = GetComponentInChildren<Canvas>().transform;
 
@@ -48,12 +37,12 @@ public class FirstPersonController : NetworkBehaviour
         }
     }
 
-    //[ClientCallback]
+    [ClientCallback]
     void Update()
     {
         if (hasAuthority) {
             Look();
-            Move();
+            Position();
         }
     }
 
@@ -72,30 +61,16 @@ public class FirstPersonController : NetworkBehaviour
         cameraTransform.localRotation = rot;
     }
 
-    void Move()
+    void Position()
     {
-        //update speed based on the input
-        Vector3 input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        input = Vector3.ClampMagnitude(input, 1f);
-        //transoform it based off the player transform and scale it by movement speed
-        Vector3 move = transform.TransformVector(input) * movementSpeed;
-        //is it on the ground
-        if (cc.isGrounded)
-        {
-            yVelocity = -gravity * Time.deltaTime;
-            //check for jump here
-            if (Input.GetButtonDown("Jump"))
-            {
-                yVelocity = jumpSpeed;
-            }
-        }
-        //now add the gravity to the yvelocity
-        yVelocity -= gravity * Time.deltaTime;
-        move.y = yVelocity;
-        //and finally move
-        cc.Move(move * Time.deltaTime);
+        // Follow Robot Position
+        Transform moverTransform = mover.transform;
+        Vector3 position = moverTransform.position;
+        //float rotation = moverTransform.eulerAngles.y;
+        //Debug.Log(rotation);
+
+        transform.position = position;
+        //transform.rotation = Quaternion.Euler(0, rotation, 0);
     }
-
-
 
 }
