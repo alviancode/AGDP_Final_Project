@@ -39,18 +39,21 @@ public class RobotMovement : NetworkBehaviour
     private void Start()
     {
         cc = GetComponent<CharacterController>();
+        cameraTransform = GetComponentInChildren<Camera>().transform;
+
+        if (!hasAuthority) {
+            cameraTransform.GetComponent<Camera>().enabled = false;
+            cameraTransform.GetComponent<AudioListener>().enabled = false;
+        }
     }
 
     [ClientCallback]
     void Update()
     {
-        if (!hasAuthority) {
-            cameraTransform.gameObject.SetActive(false);
-            return;
+        if (hasAuthority) {
+            Look();
+            Move();
         }
-
-        Look();
-        Move();
     }
 
     void Look()

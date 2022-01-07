@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 2528462635787603264}
   - component: {fileID: 1185393850104266430}
   - component: {fileID: 2324998903331026003}
+  - component: {fileID: 6193771884177887645}
   m_Layer: 0
   m_Name: RobotMovement
   m_TagString: RobotMovement
@@ -160,9 +161,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  animator: {fileID: 2402479547274612484}
+  animator: {fileID: 8847362050728992375}
   gravity: 15
-  movementSpeed: 5
+  movementSpeed: 3
   jumpSpeed: 10
   cameraTransform: {fileID: 8938176861528090148}
   maxPitch: 45
@@ -215,6 +216,22 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 3, z: 0}
+--- !u!114 &6193771884177887645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2402479545922809307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6f3bf89aa97405989c802ba270f815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  animator: {fileID: 8847362050728992375}
 --- !u!1 &2402479545933240221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,8 +1746,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2402479547274612538}
-  - component: {fileID: 2402479547274612484}
-  - component: {fileID: 964061544678009002}
+  - component: {fileID: 8847362050728992375}
   m_Layer: 0
   m_Name: robotController
   m_TagString: Player
@@ -1753,7 +1769,7 @@ Transform:
   m_Father: {fileID: 2402479545922809306}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &2402479547274612484
+--- !u!95 &8847362050728992375
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -1772,20 +1788,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!136 &964061544678009002
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2402479547274612536}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1
-  m_Height: 6
-  m_Direction: 1
-  m_Center: {x: 0, y: 3, z: 0}
 --- !u!1 &2402479547298611990
 GameObject:
   m_ObjectHideFlags: 0

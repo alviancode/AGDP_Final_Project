@@ -48,7 +48,7 @@ public class FirstPersonController : NetworkBehaviour
         }
     }
 
-    //[ClientCallback]
+    [ClientCallback]
     void Update()
     {
         if (hasAuthority) {

@@ -808,7 +808,7 @@ MonoBehaviour:
   syncInterval: 0.1
   characterSelectDisplay: {fileID: 33005088}
   robotMovementPrefab: {fileID: 2402479545922809307, guid: ab5205946c198714e8ebeb7b44ab0509, type: 3}
-  robotShooterPrefab: {fileID: 5946366486009179465, guid: 764c27613d7f5974bbd564ad8f072329, type: 3}
+  robotShooterPrefab: {fileID: 2699541615817244657, guid: 288a12241f67a3a48abe3fa5fe75862a, type: 3}
   freeRoamerPrefab: {fileID: 2699541615817244657, guid: 5d353d131e213f94fb9639806519a1fa, type: 3}
   blueFactionPrefab1: {fileID: 2699541615817244657, guid: 640e64164e7e8544db4c99697ef836b1, type: 3}
   blueFactionPrefab2: {fileID: 2699541615817244657, guid: 640e64164e7e8544db4c99697ef836b1, type: 3}
@@ -1190,7 +1190,7 @@ MonoBehaviour:
   playerSpawnMethod: 0
   spawnPrefabs:
   - {fileID: 2402479545922809307, guid: ab5205946c198714e8ebeb7b44ab0509, type: 3}
-  - {fileID: 5946366486009179465, guid: 764c27613d7f5974bbd564ad8f072329, type: 3}
+  - {fileID: 2699541615817244657, guid: 288a12241f67a3a48abe3fa5fe75862a, type: 3}
   - {fileID: 2699541615817244657, guid: 640e64164e7e8544db4c99697ef836b1, type: 3}
   - {fileID: 2699541615817244657, guid: 5d353d131e213f94fb9639806519a1fa, type: 3}
 --- !u!4 &899836192
