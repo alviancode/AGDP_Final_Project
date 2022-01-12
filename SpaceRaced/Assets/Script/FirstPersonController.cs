@@ -46,6 +46,7 @@ public class FirstPersonController : NetworkBehaviour
             cameraTransform.GetComponent<AudioListener>().enabled = false;
             canvasCrosshair.GetComponent<Canvas> ().enabled = false;
         }
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     [ClientCallback]

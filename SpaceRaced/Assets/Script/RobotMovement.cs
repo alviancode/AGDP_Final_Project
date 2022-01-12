@@ -45,6 +45,7 @@ public class RobotMovement : NetworkBehaviour
             cameraTransform.GetComponent<Camera>().enabled = false;
             cameraTransform.GetComponent<AudioListener>().enabled = false;
         }
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     [ClientCallback]

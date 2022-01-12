@@ -35,6 +35,7 @@ public class RobotShooting : NetworkBehaviour
             cameraTransform.GetComponent<AudioListener>().enabled = false;
             canvasCrosshair.GetComponent<Canvas> ().enabled = false;
         }
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     [ClientCallback]

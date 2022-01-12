@@ -49,40 +49,59 @@ public class playerSelect : NetworkBehaviour {
             CmdSelect(selectedCharacterIndex);
             Debug.Log("Cool Index Bro: " + selectedCharacterIndex);
             characterSelectDisplay.SetActive(false);
+            //Cursor.lockState = CursorLockMode.Locked;
         }
     }
+/*
+        [Server]
+    IEnumerator Respawn(GameObject gObject) {
+
+        NetworkServer.UnSpawn(gObject);
+        Transform newPosition = NetworkManager.singleton.GetStartPosition();
+        gObject.transform.position = newPosition.position;
+        gObject.transform.rotation = newPosition.rotation;
+        yield return new WaitForSeconds(1f);
+        NetworkServer.Spawn(gObject, sender);
+    }*/
 
     [Command(requiresAuthority=false)]
     public void CmdSelect(int characterIndex, NetworkConnectionToClient sender = null) {
+        
         if (characterIndex == 1) {
             GameObject characterInstance = Instantiate(robotMovementPrefab);
+            Transform newPosition = NetworkManager.singleton.GetStartPosition();
+            //characterInstance.transform.position = newPosition.position;
             NetworkServer.Spawn(characterInstance, sender);
-            Debug.Log("Char1");
         }
         if (characterIndex == 2) {
             GameObject characterInstance = Instantiate(robotShooterPrefab);
+            Transform newPosition = NetworkManager.singleton.GetStartPosition();
+            //characterInstance.transform.position = newPosition.position;
             NetworkServer.Spawn(characterInstance, sender);
-            Debug.Log("Char2");
         }
         if (characterIndex == 3) {
             GameObject characterInstance = Instantiate(freeRoamerPrefab);
+            Transform newPosition = NetworkManager.singleton.GetStartPosition();
+            //characterInstance.transform.position = newPosition.position;
             NetworkServer.Spawn(characterInstance, sender);
-            Debug.Log("Char3");
         }
         if (characterIndex == 4) {
             GameObject characterInstance = Instantiate(blueFactionPrefab1);
+            Transform newPosition = NetworkManager.singleton.GetStartPosition();
+            //characterInstance.transform.position = newPosition.position;
             NetworkServer.Spawn(characterInstance, sender);
-            Debug.Log("Char4");
         }
         if (characterIndex == 5) {
             GameObject characterInstance = Instantiate(blueFactionPrefab2);
+            Transform newPosition = NetworkManager.singleton.GetStartPosition();
+            //characterInstance.transform.position = newPosition.position;
             NetworkServer.Spawn(characterInstance, sender);
-            Debug.Log("Char5");
         }
         if (characterIndex == 6) {
             GameObject characterInstance = Instantiate(blueFactionPrefab3);
+            Transform newPosition = NetworkManager.singleton.GetStartPosition();
+            //characterInstance.transform.position = newPosition.position;
             NetworkServer.Spawn(characterInstance, sender);
-            Debug.Log("Char6");
         }
     }
 }
