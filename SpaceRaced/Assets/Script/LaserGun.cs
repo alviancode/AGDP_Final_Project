@@ -37,7 +37,6 @@ public class LaserGun : NetworkBehaviour
 
         if (Physics.Raycast(ray, out hit, range)) {
             if (hit.collider.gameObject.layer == 7) {
-                //CmdRespawn(hit.collider.gameObject);
                 var playerHealth = hit.collider.gameObject.GetComponent<TargetHealth>();
                 if(playerHealth) {
                     playerHealth.takeDamage(10f);

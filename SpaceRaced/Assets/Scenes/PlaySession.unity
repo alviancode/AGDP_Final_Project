@@ -717,6 +717,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 164144, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
+      propertyPath: m_TagString
+      value: Harvester Bot
+      objectReference: {fileID: 0}
     - target: {fileID: 452258, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -5100,6 +5104,10 @@ PrefabInstance:
     - target: {fileID: 164144, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 164144, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
+      propertyPath: m_TagString
+      value: Harvester Bot
       objectReference: {fileID: 0}
     - target: {fileID: 452258, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
       propertyPath: m_RootOrder
@@ -19085,6 +19093,10 @@ PrefabInstance:
     - target: {fileID: 164144, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 164144, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
+      propertyPath: m_TagString
+      value: Harvester Bot
       objectReference: {fileID: 0}
     - target: {fileID: 452258, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
       propertyPath: m_RootOrder

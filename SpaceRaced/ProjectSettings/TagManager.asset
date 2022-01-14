@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Shooter
   - RobotMovement
+  - Harvester Bot
   layers:
   - Default
   - TransparentFX

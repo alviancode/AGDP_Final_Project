@@ -60,37 +60,37 @@ public class playerSelect : NetworkBehaviour {
         if (characterIndex == 1) {
             GameObject characterInstance = Instantiate(robotMovementPrefab);
             Transform newPosition = NetworkManager.singleton.GetStartPosition();
-            //characterInstance.transform.position = newPosition.position;
+            characterInstance.transform.position = newPosition.position;
             NetworkServer.Spawn(characterInstance, sender);
         }
         if (characterIndex == 2) {
             GameObject characterInstance = Instantiate(robotShooterPrefab);
             Transform newPosition = NetworkManager.singleton.GetStartPosition();
-            //characterInstance.transform.position = newPosition.position;
+            characterInstance.transform.position = newPosition.position;
             NetworkServer.Spawn(characterInstance, sender);
         }
         if (characterIndex == 3) {
             GameObject characterInstance = Instantiate(freeRoamerPrefab);
             Transform newPosition = NetworkManager.singleton.GetStartPosition();
-            //characterInstance.transform.position = newPosition.position;
+            characterInstance.transform.position = newPosition.position;
             NetworkServer.Spawn(characterInstance, sender);
         }
         if (characterIndex == 4) {
             GameObject characterInstance = Instantiate(blueFactionPrefab1);
             Transform newPosition = NetworkManager.singleton.GetStartPosition();
-            //characterInstance.transform.position = newPosition.position;
+            characterInstance.transform.position = newPosition.position;
             NetworkServer.Spawn(characterInstance, sender);
         }
         if (characterIndex == 5) {
             GameObject characterInstance = Instantiate(blueFactionPrefab2);
             Transform newPosition = NetworkManager.singleton.GetStartPosition();
-            //characterInstance.transform.position = newPosition.position;
+            characterInstance.transform.position = newPosition.position;
             NetworkServer.Spawn(characterInstance, sender);
         }
         if (characterIndex == 6) {
             GameObject characterInstance = Instantiate(blueFactionPrefab3);
             Transform newPosition = NetworkManager.singleton.GetStartPosition();
-            //characterInstance.transform.position = newPosition.position;
+            characterInstance.transform.position = newPosition.position;
             NetworkServer.Spawn(characterInstance, sender);
         }
     }
