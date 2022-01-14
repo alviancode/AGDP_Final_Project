@@ -52,17 +52,7 @@ public class playerSelect : NetworkBehaviour {
             //Cursor.lockState = CursorLockMode.Locked;
         }
     }
-/*
-        [Server]
-    IEnumerator Respawn(GameObject gObject) {
 
-        NetworkServer.UnSpawn(gObject);
-        Transform newPosition = NetworkManager.singleton.GetStartPosition();
-        gObject.transform.position = newPosition.position;
-        gObject.transform.rotation = newPosition.rotation;
-        yield return new WaitForSeconds(1f);
-        NetworkServer.Spawn(gObject, sender);
-    }*/
 
     [Command(requiresAuthority=false)]
     public void CmdSelect(int characterIndex, NetworkConnectionToClient sender = null) {

@@ -36,14 +36,12 @@ public class LaserGun : NetworkBehaviour
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, range)) {
-            var player = hit.collider.gameObject.GetComponent<LaserGun>();
-            //Debug.Log(hit.collider.gameObject.tag);
-            //Debug.Log(hit.transform.name);
-            //Debug.Log(hit.collider.GetComponent<Collider>().gameObject);
-
-            if(player) {
-                //StartCoroutine(Respawn(hit.collider.gameObject));
-                CmdRespawn(hit.collider.gameObject);
+            if (hit.collider.gameObject.layer == 7) {
+                //CmdRespawn(hit.collider.gameObject);
+                var playerHealth = hit.collider.gameObject.GetComponent<TargetHealth>();
+                if(playerHealth) {
+                    playerHealth.takeDamage(10f);
+                }
             }
 
             RpcDrawLaser(laserTransform.position, hit.point);
@@ -52,31 +50,14 @@ public class LaserGun : NetworkBehaviour
         }
     }
 
-
     [Command(requiresAuthority=false)]
-    public void CmdRespawn(GameObject gObject){
-        NetworkConnection playerConn = gObject.GetComponent<NetworkIdentity>().connectionToClient;
-        NetworkServer.Destroy(gObject);
-
-        GameObject newPlayer = Instantiate(gObject);
-        NetworkServer.Spawn(newPlayer);
-
-        NetworkServer.ReplacePlayerForConnection(playerConn, newPlayer);
-        NetworkServer.Destroy(gObject);
-    }
-
-
-/*
-    [Server]
-    IEnumerator Respawn(GameObject gObject) {
-        NetworkServer.UnSpawn(gObject);
+    public void CmdRespawn(GameObject gObject) {
+        gObject.SetActive(false);
         Transform newPosition = NetworkManager.singleton.GetStartPosition();
-        //gObject.transform.position = newPosition.position;
-        //gObject.transform.rotation = newPosition.rotation;
-        yield return new WaitForSeconds(1f);
-        NetworkServer.Spawn(gObject);
-    }*/
-
+        gObject.transform.position = newPosition.position;
+        gObject.transform.rotation = newPosition.rotation;
+        gObject.SetActive(true);
+    }
 
     [ClientRpc]
     void RpcDrawLaser(Vector3 start, Vector3 end) {

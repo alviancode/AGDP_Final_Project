@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7558215750273208671}
   - component: {fileID: 735227948483350803}
   - component: {fileID: 3715133419486341102}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 2699541614218734238}
   - component: {fileID: 2699541614218734235}
   - component: {fileID: 2699541614218734236}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 2699541614725998675}
   - component: {fileID: 2699541614725998676}
   - component: {fileID: 2699541614725998677}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -256,7 +256,8 @@ GameObject:
   - component: {fileID: 4084974758110990259}
   - component: {fileID: 8605124632045680407}
   - component: {fileID: 2165590349985880554}
-  m_Layer: 0
+  - component: {fileID: 7289642845727359505}
+  m_Layer: 7
   m_Name: FreeRoamer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -509,6 +510,22 @@ MonoBehaviour:
   line: {fileID: 4410974781210871745}
   damage: 10
   range: 100
+--- !u!114 &7289642845727359505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699541615817244657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a703dd98ffbaf04296eb900d3198968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  damageReduction: 0
+  respawnable: 1
 --- !u!1 &3136625245200168079
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +538,7 @@ GameObject:
   - component: {fileID: 8763778867933935618}
   - component: {fileID: 7324518848491606944}
   - component: {fileID: 8246762925149782923}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -616,7 +633,7 @@ GameObject:
   - component: {fileID: 6219128871097484093}
   - component: {fileID: 6461885779377115527}
   - component: {fileID: 1892363693322830622}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -714,7 +731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6525712292071291188}
   - component: {fileID: 4410974781210871745}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Laser Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8839884573353207213}
   - component: {fileID: 8566071957987782272}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Laser Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 4919156044081518776}
   - component: {fileID: 2901555867500815400}
   - component: {fileID: 6676084774595383439}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 4994122247446900023}
   - component: {fileID: 6519247700253007765}
   - component: {fileID: 26895432261698409}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 2699541614218734238}
   - component: {fileID: 2699541614218734235}
   - component: {fileID: 2699541614218734236}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 2699541614725998675}
   - component: {fileID: 2699541614725998676}
   - component: {fileID: 2699541614725998677}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 5
+  near clip plane: 2.5
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 2772718772324662988}
   - component: {fileID: 2092378508065054567}
   - component: {fileID: 4307856373554482360}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RobotShooting
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -663,8 +663,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  maxPitch: 85
-  minPitch: -85
+  maxPitch: 30
+  minPitch: -30
   mouseSensitivity: 2
 --- !u!114 &2092378508065054567
 MonoBehaviour:
@@ -726,7 +726,7 @@ GameObject:
   - component: {fileID: 8763778867933935618}
   - component: {fileID: 7324518848491606944}
   - component: {fileID: 8246762925149782923}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -818,7 +818,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2175380889041447002}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}

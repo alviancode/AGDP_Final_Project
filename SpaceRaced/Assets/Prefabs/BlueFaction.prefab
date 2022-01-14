@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6931760895534036776}
   - component: {fileID: 5136574252820647099}
   - component: {fileID: 104270207538516098}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 2699541614218734238}
   - component: {fileID: 2699541614218734235}
   - component: {fileID: 2699541614218734236}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 2699541614725998675}
   - component: {fileID: 2699541614725998676}
   - component: {fileID: 2699541614725998677}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -256,7 +256,8 @@ GameObject:
   - component: {fileID: 3972497971812490103}
   - component: {fileID: 3279371188911073810}
   - component: {fileID: 1541084010386146438}
-  m_Layer: 0
+  - component: {fileID: 5964719308782735867}
+  m_Layer: 7
   m_Name: BlueFaction
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -509,6 +510,22 @@ MonoBehaviour:
   showOverlay: 0
   overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
   target: {fileID: 2699541614725998675}
+--- !u!114 &5964719308782735867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699541615817244657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a703dd98ffbaf04296eb900d3198968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  damageReduction: 0
+  respawnable: 1
 --- !u!1 &3136625245200168079
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +538,7 @@ GameObject:
   - component: {fileID: 8763778867933935618}
   - component: {fileID: 7324518848491606944}
   - component: {fileID: 8246762925149782923}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -614,7 +631,7 @@ GameObject:
   m_Component:
   - component: {fileID: 624391060577597021}
   - component: {fileID: 6606681664735245907}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Laser Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -745,7 +762,7 @@ GameObject:
   - component: {fileID: 1884196383853259203}
   - component: {fileID: 5006184946150242844}
   - component: {fileID: 7577380970360444687}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
