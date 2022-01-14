@@ -705,9 +705,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1324620131}
     m_Modifications:
+    - target: {fileID: 161250, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 164144, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
       propertyPath: m_Name
       value: Bot 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 164144, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 452258, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
       propertyPath: m_RootOrder
@@ -756,6 +764,14 @@ PrefabInstance:
     - target: {fileID: 20560586, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
       propertyPath: m_FadeMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420311804991254, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712987799692976, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
@@ -5073,9 +5089,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1324620131}
     m_Modifications:
+    - target: {fileID: 161250, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 164144, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
       propertyPath: m_Name
       value: Bot 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 164144, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 452258, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
       propertyPath: m_RootOrder
@@ -5124,6 +5148,14 @@ PrefabInstance:
     - target: {fileID: 20560586, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
       propertyPath: m_FadeMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420311804991254, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712987799692976, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
@@ -13665,6 +13697,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 164144, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
   m_PrefabInstance: {fileID: 598831060}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1562069059
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562069058}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1.5, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &1562069061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13680,7 +13725,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   damageReduction: 5
-  despawnable: 0
+  respawnable: 0
 --- !u!114 &1562069062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13737,6 +13782,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 164144, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
   m_PrefabInstance: {fileID: 61587665}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1577749884
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577749883}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1.5, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &1577749886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13752,7 +13810,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   damageReduction: 5
-  despawnable: 0
+  respawnable: 0
 --- !u!114 &1577749887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17903,6 +17961,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 164144, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
   m_PrefabInstance: {fileID: 2143464670}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1985308837
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985308836}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1.5, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &1985308839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17947,7 +18018,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   damageReduction: 5
-  despawnable: 0
+  respawnable: 0
 --- !u!114 &1985308841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19003,9 +19074,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1324620131}
     m_Modifications:
+    - target: {fileID: 161250, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 164144, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
       propertyPath: m_Name
       value: Bot 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 164144, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 452258, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
       propertyPath: m_RootOrder
@@ -19054,6 +19133,14 @@ PrefabInstance:
     - target: {fileID: 20560586, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
       propertyPath: m_FadeMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420311804991254, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712987799692976, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8473c35643362f548bb7d38bb13d27a7, type: 3}
