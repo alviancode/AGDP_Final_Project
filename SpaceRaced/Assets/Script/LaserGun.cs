@@ -39,7 +39,7 @@ public class LaserGun : NetworkBehaviour
             if (hit.collider.gameObject.layer == 7) {
                 var playerHealth = hit.collider.gameObject.GetComponent<TargetHealth>();
                 if(playerHealth) {
-                    playerHealth.takeDamage(10f);
+                    playerHealth.takeDamage(damage);
                 }
             }
 

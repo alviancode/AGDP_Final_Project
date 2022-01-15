@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Mirror;
 
 public class TargetHealth : NetworkBehaviour
@@ -10,6 +11,13 @@ public class TargetHealth : NetworkBehaviour
 
     public float damageReduction = 0f;
     public bool respawnable;
+    public Image healthBar;
+
+    void Update() {
+        float scaleX = health / 100;
+
+        healthBar.rectTransform.localScale = new Vector3(scaleX, 1, 1);
+    }
 
 
     public void takeDamage(float amount) {
@@ -25,12 +33,12 @@ public class TargetHealth : NetworkBehaviour
         }
     }
 
+
     [Command(requiresAuthority=false)]
     public void CmdRespawn(GameObject gObject) {
         gObject.SetActive(false);
         Transform newPosition = NetworkManager.singleton.GetStartPosition();
         gObject.transform.position = newPosition.position;
-        gObject.transform.rotation = newPosition.rotation;
         gObject.SetActive(true);
     }
 

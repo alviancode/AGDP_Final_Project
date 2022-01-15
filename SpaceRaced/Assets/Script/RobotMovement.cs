@@ -4,7 +4,7 @@ using UnityEngine;
 using Mirror;
 
 [RequireComponent(typeof(CharacterController))]
-public class RobotMovement : NetworkBehaviour
+public class robotMovement : NetworkBehaviour
 {
 
    /// <summary>

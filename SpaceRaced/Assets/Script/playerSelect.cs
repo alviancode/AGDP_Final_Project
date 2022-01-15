@@ -49,7 +49,7 @@ public class playerSelect : NetworkBehaviour {
             CmdSelect(selectedCharacterIndex);
             Debug.Log("Cool Index Bro: " + selectedCharacterIndex);
             characterSelectDisplay.SetActive(false);
-            //Cursor.lockState = CursorLockMode.Locked;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 

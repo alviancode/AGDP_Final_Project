@@ -23,10 +23,10 @@ public class gameManager : NetworkBehaviour
             //Debug.Log(NetworkServer.connections.Count);
             if(NetworkServer.connections.Count == 2) {
                     currentTime -= Time.deltaTime;
-                    TimeSpan time = TimeSpan.FromSeconds(currentTime);
-                    Debug.Log(time.Minutes.ToString() + ":" + time.Seconds.ToString());
+                    
             }
         }
-        
+        TimeSpan time = TimeSpan.FromSeconds(currentTime);
+        Debug.Log(time.Minutes.ToString() + ":" + time.Seconds.ToString());
     }
 }
