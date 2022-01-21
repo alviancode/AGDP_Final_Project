@@ -22,6 +22,8 @@ public class RobotShooting : NetworkBehaviour
     [Range(0.5f, 5f)]
     public float mouseSensitivity = 2f;
 
+    public bool paused = false;
+
     Transform canvasCrosshair;
 
     private void Start()
@@ -35,7 +37,6 @@ public class RobotShooting : NetworkBehaviour
             cameraTransform.GetComponent<AudioListener>().enabled = false;
             canvasCrosshair.GetComponent<Canvas> ().enabled = false;
         }
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     [ClientCallback]
@@ -44,6 +45,17 @@ public class RobotShooting : NetworkBehaviour
         if (hasAuthority) {
             Look();
             Position();
+
+            if(Input.GetKeyDown(KeyCode.Escape)) {
+                if(paused) {
+                    Cursor.lockState = CursorLockMode.Locked;
+                    paused = false;
+                }
+                else {
+                    Cursor.lockState = CursorLockMode.None;
+                    paused = true;
+                }
+            }
         }
     }
 
@@ -64,9 +76,15 @@ public class RobotShooting : NetworkBehaviour
 
     void Position()
     {
+        Vector3 position;
         // Follow Robot Position
-        Transform moverTransform = mover.transform;
-        Vector3 position = moverTransform.position;
+        if(mover == null) {
+            position = new Vector3 (0f, 0f, 0f);
+        }
+        else {
+            Transform moverTransform = mover.transform;
+            position = moverTransform.position;
+        }
         //float rotation = moverTransform.eulerAngles.y;
         //Debug.Log(rotation);
 

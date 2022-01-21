@@ -30,6 +30,8 @@ public class FirstPersonController : NetworkBehaviour
     [Range(0.5f, 5f)]
     public float mouseSensitivity = 2f;
 
+    public bool paused = false;
+
     //the charachtercompononet for moving us
     CharacterController cc;
 
@@ -46,7 +48,8 @@ public class FirstPersonController : NetworkBehaviour
             cameraTransform.GetComponent<AudioListener>().enabled = false;
             canvasCrosshair.GetComponent<Canvas> ().enabled = false;
         }
-        //Cursor.lockState = CursorLockMode.Locked;
+
+
     }
 
     [ClientCallback]
@@ -55,7 +58,19 @@ public class FirstPersonController : NetworkBehaviour
         if (hasAuthority) {
             Look();
             Move();
+
+            if(Input.GetKeyDown(KeyCode.Escape)) {
+                if(paused) {
+                    Cursor.lockState = CursorLockMode.Locked;
+                    paused = false;
+                }
+                else {
+                    Cursor.lockState = CursorLockMode.None;
+                    paused = true;
+                }
+            }
         }
+
     }
 
     void Look()

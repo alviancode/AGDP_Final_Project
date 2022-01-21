@@ -45,14 +45,12 @@ public class gameManager : NetworkBehaviour
             Debug.Log("BlueTeamWin");
             blueWin.SetActive(true);
             disableUI.SetActive(false);
-            //SceneManager.LoadScene("BlueTeamWin");
         }
 
         if(currentTime > 0 && numberOfBotsLeft <= 0) {
             Debug.Log("RedTeamWin");
             redWin.SetActive(true);
             disableUI.SetActive(false);
-            //SceneManager.LoadScene("RedTeamWin");
         }
     }
 

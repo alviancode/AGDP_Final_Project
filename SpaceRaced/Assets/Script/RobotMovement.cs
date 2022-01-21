@@ -33,17 +33,23 @@ public class robotMovement : NetworkBehaviour
     [Range(0.5f, 5f)]
     public float mouseSensitivity = 2f;
 
+    public bool paused = false;
+
     //the charachtercompononet for moving us
     CharacterController cc;
+
+    Transform canvasCrosshair;
 
     private void Start()
     {
         cc = GetComponent<CharacterController>();
         cameraTransform = GetComponentInChildren<Camera>().transform;
+        canvasCrosshair = GetComponentInChildren<Canvas>().transform;
 
         if (!hasAuthority) {
             cameraTransform.GetComponent<Camera>().enabled = false;
             cameraTransform.GetComponent<AudioListener>().enabled = false;
+            canvasCrosshair.GetComponent<Canvas> ().enabled = false;
         }
         //Cursor.lockState = CursorLockMode.Locked;
     }
@@ -54,6 +60,17 @@ public class robotMovement : NetworkBehaviour
         if (hasAuthority) {
             Look();
             Move();
+
+            if(Input.GetKeyDown(KeyCode.Escape)) {
+                if(paused) {
+                    Cursor.lockState = CursorLockMode.Locked;
+                    paused = false;
+                }
+                else {
+                    Cursor.lockState = CursorLockMode.None;
+                    paused = true;
+                }
+            }
         }
     }
 

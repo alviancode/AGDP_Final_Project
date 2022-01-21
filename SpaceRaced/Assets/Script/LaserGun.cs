@@ -24,7 +24,7 @@ public class LaserGun : NetworkBehaviour
         if (!hasAuthority){
             return;
         }
-
+        
         if(Input.GetMouseButtonDown(0)) {
             CmdShoot();
         }
