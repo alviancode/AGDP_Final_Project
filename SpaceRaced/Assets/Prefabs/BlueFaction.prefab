@@ -1372,7 +1372,7 @@ GameObject:
   - component: {fileID: 7577380970360444687}
   m_Layer: 7
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: disableUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

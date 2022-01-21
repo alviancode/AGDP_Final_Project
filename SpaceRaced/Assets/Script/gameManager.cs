@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Mirror;
 using System;
 
@@ -8,34 +9,61 @@ public class gameManager : NetworkBehaviour
 {
     [SerializeField] private GameObject harvesterBotPrefab = default;
 
+    [SyncVar]
     float currentTime;
+    int numberOfBotsLeft;
+
+
     public int startMinutes;
     public int numberOfBots;
-    //public Text currentTimeText;
+    public int numberOfPlayer;
+
+    public GameObject redWin;
+    public GameObject blueWin;
+
+    GameObject disableUI;
+
+
+
 
 
     // Update is called once per frame
     void Update()
     {
+        disableUI =  GameObject.FindWithTag("disableUI");
         if(isServer) {
-            //Debug.Log(NetworkServer.connections.Count);
-            if(NetworkServer.connections.Count == 2) {
+            if(NetworkServer.connections.Count >= numberOfPlayer && numberOfBotsLeft > 0) {
                     currentTime -= Time.deltaTime;
             }
         }
         TimeSpan time = TimeSpan.FromSeconds(currentTime);
         Debug.Log(time.Minutes.ToString() + ":" + time.Seconds.ToString());
+
+        numberOfBotsLeft = GameObject.FindGameObjectsWithTag("Harvester Bot").Length;
+        
+        if(currentTime <= 0 && numberOfBotsLeft > 0) {
+            Debug.Log("BlueTeamWin");
+            blueWin.SetActive(true);
+            disableUI.SetActive(false);
+            //SceneManager.LoadScene("BlueTeamWin");
+        }
+
+        if(currentTime > 0 && numberOfBotsLeft <= 0) {
+            Debug.Log("RedTeamWin");
+            redWin.SetActive(true);
+            disableUI.SetActive(false);
+            //SceneManager.LoadScene("RedTeamWin");
+        }
     }
 
 
     public override void OnStartServer() {
         currentTime = startMinutes * 60;
-        SPawnHarvester();
+        SpawnHarvester();
     }
 
 
-    //[Command(requiresAuthority=false)]
-    public void SPawnHarvester() {
+    public void SpawnHarvester() {
         for (int i = 0; i < numberOfBots; i++) {
             GameObject harvesterInstance = Instantiate(harvesterBotPrefab);
             Transform newPosition = NetworkManager.singleton.GetStartPosition();
