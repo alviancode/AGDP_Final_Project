@@ -32,7 +32,7 @@ public class gameManager : NetworkBehaviour
     {
         disableUI =  GameObject.FindWithTag("disableUI");
         if(isServer) {
-            if(NetworkServer.connections.Count >= numberOfPlayer && numberOfBotsLeft > 0) {
+            if(NetworkServer.connections.Count >= numberOfPlayer) {
                     currentTime -= Time.deltaTime;
             }
         }
