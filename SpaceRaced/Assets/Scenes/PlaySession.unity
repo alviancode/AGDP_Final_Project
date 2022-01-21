@@ -2772,9 +2772,9 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   harvesterBotPrefab: {fileID: 3287331732088196595, guid: db76c490b47607f42b7d1e074c42410a, type: 3}
-  startMinutes: 3
+  startMinutes: 5
   numberOfBots: 3
-  numberOfPlayer: 2
+  numberOfPlayer: 4
   redWin: {fileID: 462196950}
   blueWin: {fileID: 1022384697}
 --- !u!114 &258769966
@@ -9700,7 +9700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1188638737
 Transform:
   m_ObjectHideFlags: 0
@@ -10891,7 +10891,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1309960786
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18036,8 +18036,8 @@ Camera:
   m_GameObject: {fileID: 1991686321}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0.062368974, b: 0.16037738, a: 0}
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -18219,8 +18219,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7868476758372273, guid: 43c0d2139fd08c44187c7b4da519fb0a, type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7868476758372273, guid: 43c0d2139fd08c44187c7b4da519fb0a, type: 3}
       propertyPath: m_OcclusionCulling
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7868476758372273, guid: 43c0d2139fd08c44187c7b4da519fb0a, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7868476758372273, guid: 43c0d2139fd08c44187c7b4da519fb0a, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.23529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 7868476758372273, guid: 43c0d2139fd08c44187c7b4da519fb0a, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.23529412
       objectReference: {fileID: 0}
     - target: {fileID: 7868476758372273, guid: 43c0d2139fd08c44187c7b4da519fb0a, type: 3}
       propertyPath: m_CullingMask.m_Bits
